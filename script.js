@@ -4,7 +4,7 @@ function convertxz(){
     var code = document.getElementById("code");
     var xcode;
     var zcode;
-    if (z.value.length>0){
+    if (z.value.length>0 && x.value.length>0){
         error.style.display="none";
         xcode = Math.abs(parseInt(x.value)).toString(36).toUpperCase();
         zcode = Math.abs(parseInt(z.value)).toString(36).toUpperCase();
@@ -14,9 +14,9 @@ function convertxz(){
         x.value<0 ? xcode="-"+xcode : xcode="+"+xcode;
         z.value<0 ? zcode="-"+zcode : zcode="+"+zcode;
         code.value = xcode+zcode;
-    } else if (x.value.length>0) {
+    } else if (x.value.length>0 || z.value.length>0) {
         error.style.display="flex";
-        error.innerHTML="<h2>Error</h2><p>Please enter a Z value.</p>";
+        error.innerHTML="<h2>Error</h2><p>Please enter both X and Z values.</p>";
     }
 }
 
