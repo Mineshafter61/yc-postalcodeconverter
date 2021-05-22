@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YC Postal Code Converter</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Postal Code Converter for YJJ City's Postal System. Converts from Base 10 to Base 36.">
+        <meta name="keywords" content="YJJ City, Limaru, YJJ City Postal Code">
+        <meta name="author" content="YJJcoolcool">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <h1>YJJ City Postal Code Converter</h1>
+        <div>
+            <h2>Minecraft Coordinates</h2>
+            <label for="x">X:</label>
+            <input type="number" id="x" onkeyup="convertxz()" autofocus>
+            <label for="z">Z:</label>
+            <input type="number" id="z" onkeyup="convertxz()">
+        </div>
+        <div>
+            <h2>Base-36 Postal Code</h2>
+            <label for="code">Postal Code:</label>
+            <input type="text" id="code" onkeyup="convert36()">
+        </div>
+    </body>
+</html>
